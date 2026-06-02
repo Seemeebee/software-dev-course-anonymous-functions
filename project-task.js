@@ -25,7 +25,9 @@ const todos = [
     { task: "Study JavaScript", completed: true, priority: 1 },
     { task: "Walk the dog", completed: false, priority: 2 },
   ];
-  
+let Incompletetasks = todos.filter(todo => !todo.completed);
+
+console.log("Incomplete Tasks:", Incompletetasks);
   // ============================================
   // 🔍 Tasks
   // ============================================
@@ -38,11 +40,7 @@ const todos = [
   2. Use an anonymous function as the callback.
   3. Return only the tasks that are not completed.
   */
-
-let Incompletetasks = todos.filter(completed => [completed:] >= false);
-
-console.log(Incompletetasks);
-};  /*
+ /*
   🔹 Task 2: Sort Tasks by Priority
   
   Step-by-Step:
