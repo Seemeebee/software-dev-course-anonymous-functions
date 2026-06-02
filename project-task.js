@@ -38,8 +38,11 @@ const todos = [
   2. Use an anonymous function as the callback.
   3. Return only the tasks that are not completed.
   */
-  
-  /*
+
+let Incompletetasks = todos.filter(completed => [completed:] >= false);
+
+console.log(Incompletetasks);
+};  /*
   🔹 Task 2: Sort Tasks by Priority
   
   Step-by-Step:
