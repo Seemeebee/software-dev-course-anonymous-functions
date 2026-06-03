@@ -25,9 +25,14 @@ const todos = [
     { task: "Study JavaScript", completed: true, priority: 1 },
     { task: "Walk the dog", completed: false, priority: 2 },
   ];
-let Incompletetasks = todos.filter(todo => !todo.completed);
+/*let Incompletetasks = todos
+    .filter(todo => !todo.completed)
+    .sort((a, b) => a.priority - b.priority)
+    .map(todo => todo.task);
+console.log("incompletestasks:", incompletetasks);
 
-console.log("Incomplete Tasks:", Incompletetasks);
+
+
   // ============================================
   // 🔍 Tasks
   // ============================================
@@ -40,16 +45,23 @@ console.log("Incomplete Tasks:", Incompletetasks);
   2. Use an anonymous function as the callback.
   3. Return only the tasks that are not completed.
   */
- /*
-  🔹 Task 2: Sort Tasks by Priority
+ const incompletetasks = todos.filter((todo) => !todo.completed);
+ console.log("Incomplete Tasks:", incompletetasks);
+ 
+  /*
+ 
+ 🔹 Task 2: Sort Tasks by Priority
+
+
   
   Step-by-Step:
   1. Use the `sort()` method on the todos array.
   2. Use an anonymous function as the comparison function.
   3. Sort tasks in ascending order of priority (1 = highest).
   */
-
-  /*
+ todos.sort((a, b) => a.priority - b.priority)
+ console.log("Sorted by Priority:", todos); 
+ /*
   🔹 Task 3: Combine Filters
   
   Step-by-Step:
@@ -57,16 +69,21 @@ console.log("Incomplete Tasks:", Incompletetasks);
   2. Then, sort the filtered results by priority using `sort()`.
   3. Use method chaining to perform both steps together.
   */
-
-  /*
+  const combineFilter = todos.filter(task =>task
+  .completed==false).sort((a,b) =>a.priority-b.priority);
+  console.log("Sorted Incomplete Tasks:", combineFilter);
+/*
   🔹 Task 4: Mark All Tasks as Completed
   
   Step-by-Step:
   1. Use the `map()` method to return a new array.
   2. Use an anonymous function to modify each object.
   3. Change the `completed` property to `true` for every task.
+  const completedTasks = todos.map(task => ({ ...task, completed: true }));
   */
-  
+   const completedTask = todos.map(task=>{
+    return {...task,completed:true};
+  });
   // ============================================
   // 🧪 Console Test Your Work
   // ============================================
